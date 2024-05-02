@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ribbon Tracking and Guidance</title>
-		<meta name="description" content="Keep track of your Pokémon and their Ribbons using Ribbons.Guide!">
+		<title>奖章记录与指导</title>
+		<meta name="description" content="使用Ribbons.Guide来记录和追踪您的宝可梦以及他们的奖章。">
 		<!--compatibility-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +19,14 @@
 		<!-- Social Meta Tags -->
 		<meta property="og:url" content="https://ribbons.guide">
 		<meta property="og:type" content="website">
-		<meta property="og:title" content="Ribbon Tracking and Guidance">
-		<meta property="og:description" content="Keep track of your Pokémon and their Ribbons using Ribbons.Guide!">
+		<meta property="og:title" content="奖章记录与指导">
+		<meta property="og:description" content="使用Ribbons.Guide来记录和追踪您的宝可梦以及他们的奖章。">
 		<meta property="og:image" content="og-image.png">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta property="twitter:domain" content="ribbons.guide">
 		<meta property="twitter:url" content="https://ribbons.guide">
-		<meta name="twitter:title" content="Ribbon Tracking and Guidance">
-		<meta name="twitter:description" content="Keep track of your Pokémon and their Ribbons using Ribbons.Guide!">
+		<meta name="twitter:title" content="奖章记录与指导">
+		<meta name="twitter:description" content="使用Ribbons.Guide来记录和追踪您的宝可梦以及他们的奖章。">
 		<meta name="twitter:image" content="og-image.png">
 		<!--CSS-->
 		<link href="css/jquery.modal.min.css" rel="stylesheet">
@@ -66,119 +66,119 @@
 			</div>
 			<div id="header-icons">
 				<a id="header-discord" href="https://discord.gg/frv7dpWzDG" target="_blank"><img src="img/ui/discord.svg" alt="Discord" title="Discord"></a>
-				<img src="img/ui/gear.svg" id="header-settings" alt="Settings" title="Settings">
+				<img src="img/ui/gear.svg" id="header-settings" alt="Settings" title="设置">
 			</div>
 		</header>
 		<div id="menu">
-			<button id="menu-boxes" title="Boxes"><img src="img/ui/box-closed.png" alt="Boxes"></button>
+			<button id="menu-boxes" title="Boxes"><img src="img/ui/box-closed.png" alt="新建盒子"></button>
 			<button id="menu-filter" title="Filter"><img src="img/ui/filter.svg" alt="Filter"><span id="menu-filter-count" data-filters=""></span></button>
 		</div>
 		<div id="filterform" class="modal">
 			<h4>
-				<div>Filter/Sort Pokémon</div>
+				<div>搜索/排序</div>
 			</h4>
 			<table>
 				<tr>
-					<th><label for="filterform-sort">⇵ Sort</label></th>
+					<th><label for="filterform-sort">⇵ 排序</label></th>
 					<td>
 						<select id="filterform-sort">
-							<option value="default">Default</option>
-							<option value="dexasc">National Pokédex ▲</option>
-							<option value="dexdesc">National Pokédex ▼</option>
-							<option value="levelasc">Current Level ▲</option>
-							<option value="leveldesc">Current Level ▼</option>
-							<option value="nameasc">Name (A-Z)</option>
-							<option value="namedesc">Name (Z-A)</option>
+							<option value="default">默认</option>
+							<option value="dexasc">全国图鉴 ▲</option>
+							<option value="dexdesc">全国图鉴 ▼</option>
+							<option value="levelasc">当前等级 ▲</option>
+							<option value="leveldesc">当前等级 ▼</option>
+							<option value="nameasc">名字（A-Z）</option>
+							<option value="namedesc">名字（Z-A）</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-box">Current Box</label></th>
+					<th><label for="filterform-box">当前盒子</label></th>
 					<td>
 						<select id="filterform-box">
 							<option value="-2">—</option>
-							<option value="-1">None</option>
+							<option value="-1">无</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-gender">Gender</label></th>
+					<th><label for="filterform-gender">性别</label></th>
 					<td>
 						<select id="filterform-gender">
 							<option value="-2">—</option>
-							<option>Male</option>
-							<option>Female</option>
-							<option value="unknown">Gender unknown</option>
+							<option>雄性</option>
+							<option>雌性</option>
+							<option value="unknown">性别不明</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-shiny">Shiny</label></th>
+					<th><label for="filterform-shiny">异色</label></th>
 					<td>
 						<select id="filterform-shiny">
 							<option value="-2">—</option>
-							<option>Normal</option>
-							<option>Star</option>
-							<option>Square</option>
+							<option>普通</option>
+							<option>星星异色</option>
+							<option>方块异色</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<th><label>Level</label></th>
+					<th><label>等级</label></th>
 					<td>
 						<input id="filterform-level-min" type="number" placeholder="1" min="1" max="100"><span id="filterform-level-divider">–</span><input id="filterform-level-max" type="number" placeholder="100" min="1" max="100">
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-origin">Origin Game</label></th>
+					<th><label for="filterform-origin">来源版本</label></th>
 					<td>
 						<select id="filterform-origin">
 							<option value="-2">—</option>
-							<optgroup id="filterform-origin-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="filterform-origin-7" label="Gen VII"></optgroup>
-							<optgroup id="filterform-origin-6" label="Gen VI"></optgroup>
-							<optgroup id="filterform-origin-5" label="Gen V"></optgroup>
-							<optgroup id="filterform-origin-4" label="Gen IV"></optgroup>
-							<optgroup id="filterform-origin-3" label="Gen III"></optgroup>
-							<optgroup id="filterform-origin-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="filterform-origin-1" label="Gen I Virtual Console"></optgroup>
+							<optgroup id="filterform-origin-8" label="第八、九世代"></optgroup>
+							<optgroup id="filterform-origin-7" label="第七世代"></optgroup>
+							<optgroup id="filterform-origin-6" label="第六世代"></optgroup>
+							<optgroup id="filterform-origin-5" label="第五世代"></optgroup>
+							<optgroup id="filterform-origin-4" label="第四世代"></optgroup>
+							<optgroup id="filterform-origin-3" label="第三世代"></optgroup>
+							<optgroup id="filterform-origin-2" label="第二世代 虚拟主机"></optgroup>
+							<optgroup id="filterform-origin-1" label="第一世代 虚拟主机"></optgroup>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-currentgame">Current Game</label></th>
+					<th><label for="filterform-currentgame">当前版本</label></th>
 					<td>
 						<select id="filterform-currentgame">
 							<option value="-2">—</option>
-							<optgroup id="filterform-currentgame-storage" label="Storage"></optgroup>
-							<optgroup id="filterform-currentgame-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="filterform-currentgame-7" label="Gen VII"></optgroup>
-							<optgroup id="filterform-currentgame-6" label="Gen VI"></optgroup>
-							<optgroup id="filterform-currentgame-5" label="Gen V"></optgroup>
-							<optgroup id="filterform-currentgame-4" label="Gen IV"></optgroup>
-							<optgroup id="filterform-currentgame-3" label="Gen III"></optgroup>
-							<optgroup id="filterform-currentgame-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="filterform-currentgame-1" label="Gen I Virtual Console"></optgroup>
+							<optgroup id="filterform-currentgame-storage" label="存储系统"></optgroup>
+							<optgroup id="filterform-currentgame-8" label="第八、九世代"></optgroup>
+							<optgroup id="filterform-currentgame-7" label="第七世代"></optgroup>
+							<optgroup id="filterform-currentgame-6" label="第六世代"></optgroup>
+							<optgroup id="filterform-currentgame-5" label="第五世代"></optgroup>
+							<optgroup id="filterform-currentgame-4" label="第四世代"></optgroup>
+							<optgroup id="filterform-currentgame-3" label="第三世代"></optgroup>
+							<optgroup id="filterform-currentgame-2" label="第二世代 虚拟主机"></optgroup>
+							<optgroup id="filterform-currentgame-1" label="第一世代 虚拟主机"></optgroup>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-games">Games it can<br> travel to</label></th>
+					<th><label for="filterform-games">可移动过去<br>的版本</label></th>
 					<td>
 						<select id="filterform-games" multiple>
-							<optgroup id="filterform-games-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="filterform-games-7" label="Gen VII"></optgroup>
-							<optgroup id="filterform-games-6" label="Gen VI"></optgroup>
-							<optgroup id="filterform-games-5" label="Gen V"></optgroup>
-							<optgroup id="filterform-games-4" label="Gen IV"></optgroup>
-							<optgroup id="filterform-games-3" label="Gen III"></optgroup>
-							<optgroup id="filterform-games-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="filterform-games-1" label="Gen I Virtual Console"></optgroup>
+							<optgroup id="filterform-games-8" label="第八、九世代"></optgroup>
+							<optgroup id="filterform-games-7" label="第七世代"></optgroup>
+							<optgroup id="filterform-games-6" label="第六世代"></optgroup>
+							<optgroup id="filterform-games-5" label="第五世代"></optgroup>
+							<optgroup id="filterform-games-4" label="第四世代"></optgroup>
+							<optgroup id="filterform-games-3" label="第三世代"></optgroup>
+							<optgroup id="filterform-games-2" label="第二世代 虚拟主机"></optgroup>
+							<optgroup id="filterform-games-1" label="第一世代 虚拟主机"></optgroup>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-lang">Language</label></th>
+					<th><label for="filterform-lang">语言</label></th>
 					<td>
 						<select id="filterform-lang">
 							<option value="-2">—</option>
@@ -186,47 +186,47 @@
 					</td>
 				</tr>
 				<tr>
-					<th><label for="filterform-ball">Poké Ball</label></th>
+					<th><label for="filterform-ball">精灵球</label></th>
 					<td>
 						<select id="filterform-ball">
 							<option value="-2">—</option>
-							<optgroup id="filterform-ball-standard" label="Standard"></optgroup>
-							<optgroup id="filterform-ball-hisui" label="Hisui"></optgroup>
+							<optgroup id="filterform-ball-standard" label="普通"></optgroup>
+							<optgroup id="filterform-ball-hisui" label="洗翠地区"></optgroup>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2">Pokémon will only be shown if they fulfill all conditions, including being able to travel to all of the selected games (which requires setting their current game). Pokémon stored in HOME are not considered able to travel to <em>Let's&nbsp;Go, Pikachu!</em> or <em>Let's&nbsp;Go, Eevee!</em>.</td>
+					<td colspan="2">只有满足所有条件的宝可梦才会显示出来，其中包括所有选择的可移动过去的版本（这需要设置宝可梦的「当前版本」）。寄放在HOME的宝可梦被认为不可移动到<em>「Let's&nbsp;Go! 皮卡丘」</em>和<em>「Let's&nbsp;Go! 伊布」</em>。</td>
 				</tr>
 			</table>
 			<h5>
-				<button id="filterform-reset" class="button">Reset</button>
-				<button class="button close">Close</button>
+				<button id="filterform-reset" class="button">还原</button>
+				<button class="button close">关闭</button>
 			</h5>
 		</div>
 		<div id="boxform" class="modal">
 			<h4>
 				<div>
-					<span id="boxform-header-add">Add New</span>
-					<span id="boxform-header-edit">Edit</span>
-					<span>Box</span>
+					<span id="boxform-header-add">新建</span>
+					<span id="boxform-header-edit">修改</span>
+					<span>盒子</span>
 				</div>
 			</h4>
 			<table>
 				<tr>
-					<th><label for="boxform-name"><span class="asterisk">*</span>Name</label></th>
+					<th><label for="boxform-name"><span class="asterisk">*</span>名字</label></th>
 					<td><input type="text" id="boxform-name"></td>
 				</tr>
 			</table>
 			<h5>
-				<button id="boxform-add" class="button">Add</button>
-				<button id="boxform-edit" class="button">Save</button>
-				<button class="button close">Cancel</button>
+				<button id="boxform-add" class="button">新建</button>
+				<button id="boxform-edit" class="button">保存</button>
+				<button class="button close">取消</button>
 			</h5>
 		</div>
 		<div id="boxsort" class="modal">
 			<h4>
-				<div>Edit Boxes</div>
+				<div>编辑盒子</div>
 			</h4>
 			<table>
 				<tr>
@@ -234,25 +234,25 @@
 				</tr>
 			</table>
 			<h5>
-				<button id="boxsort-add" class="button">New Box</button>
-				<button class="button close">Close</button>
+				<button id="boxsort-add" class="button">新建盒子</button>
+				<button class="button close">关闭</button>
 			</h5>
 		</div>
 		<div id="pokemon-list">
 			<div id="pokemon-list-nomatch">
-				<div>You have no Pokémon that match your current filters.</div>
+				<div>没有搜索到满足条件的宝可梦。</div>
 			</div>
 			<div id="pokemon-list-empty">
-				<div>You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.</div>
+				<div>您还没有保存任何宝可梦。点击屏幕右下角的+按钮新建。如果您有备份文件，请点击屏幕右上角的⛭按钮恢复备份。</div>
 			</div>
 		</div>
-		<div id="add-pokemon-button" aria-label="Add New Pokémon"><img src="img/ui/add.svg" alt="Add" title="Add New Pokémon"></div>
+		<div id="add-pokemon-button" aria-label="Add New Pokémon"><img src="img/ui/add.svg" alt="Add" title="新建宝可梦"></div>
 		<div id="pokeform" class="modal">
 			<h4>
 				<div>
-					<span id="pokeform-header-add">Add New</span>
-					<span id="pokeform-header-edit">Edit</span>
-					<span>Pokémon</span>
+					<span id="pokeform-header-add">新建</span>
+					<span id="pokeform-header-edit">修改</span>
+					<span>宝可梦</span>
 				</div>
 			</h4>
 			<table>
@@ -268,62 +268,62 @@
 					</th>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-nickname">Nickname</label></th>
+					<th><label for="pokeform-nickname">昵称</label></th>
 					<td colspan="2"><input type="text" id="pokeform-nickname" maxlength="12"></td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-species"><span class="asterisk">*</span>Species</label></th>
+					<th><label for="pokeform-species"><span class="asterisk">*</span>宝可梦</label></th>
 					<td>
 						<select id="pokeform-species" required>
 							<option></option>
-							<optgroup id="pokeform-species-I" label="Gen I"></optgroup>
-							<optgroup id="pokeform-species-II" label="Gen II"></optgroup>
-							<optgroup id="pokeform-species-III" label="Gen III"></optgroup>
-							<optgroup id="pokeform-species-IV" label="Gen IV"></optgroup>
-							<optgroup id="pokeform-species-V" label="Gen V"></optgroup>
-							<optgroup id="pokeform-species-VI" label="Gen VI"></optgroup>
-							<optgroup id="pokeform-species-VII" label="Gen VII"></optgroup>
-							<optgroup id="pokeform-species-VIII" label="Gen VIII"></optgroup>
-							<optgroup id="pokeform-species-IX" label="Gen IX"></optgroup>
+							<optgroup id="pokeform-species-I" label="第一世代"></optgroup>
+							<optgroup id="pokeform-species-II" label="第二世代"></optgroup>
+							<optgroup id="pokeform-species-III" label="第三世代"></optgroup>
+							<optgroup id="pokeform-species-IV" label="第四世代"></optgroup>
+							<optgroup id="pokeform-species-V" label="第五世代"></optgroup>
+							<optgroup id="pokeform-species-VI" label="第六世代"></optgroup>
+							<optgroup id="pokeform-species-VII" label="第七世代"></optgroup>
+							<optgroup id="pokeform-species-VIII" label="第八世代"></optgroup>
+							<optgroup id="pokeform-species-IX" label="第九世代"></optgroup>
 						</select>
 						<div id="pokeform-shiny-toggle">
 							<input type="radio" id="pokeform-shiny-none" name="pokeform-shiny" value="" checked="checked" />
-							<label for="pokeform-shiny-none"><img src="img/ui/pokeball.png" alt="Normal icon"><span>Normal</span></label>
+							<label for="pokeform-shiny-none"><img src="img/ui/pokeball.png" alt="Normal icon"><span>普通</span></label>
 							<input type="radio" id="pokeform-shiny-star" name="pokeform-shiny" value="star" />
-							<label for="pokeform-shiny-star"><img src="img/ui/shiny-star.png" alt="Star shiny icon"><span>Star</span></label>
+							<label for="pokeform-shiny-star"><img src="img/ui/shiny-star.png" alt="Star shiny icon"><span>星星异色</span></label>
 							<input type="radio" id="pokeform-shiny-square" name="pokeform-shiny" value="square" />
-							<label for="pokeform-shiny-square"><img src="img/ui/shiny-square.svg" alt="Square shiny icon"><span>Square</span></label>
+							<label for="pokeform-shiny-square"><img src="img/ui/shiny-square.svg" alt="Square shiny icon"><span>方块异色</span></label>
 						</div>
 						<div id="pokeform-gender-toggle">
 							<input type="radio" id="pokeform-gender-male" name="pokeform-gender" value="male" checked="checked" />
-							<label for="pokeform-gender-male"><img src="img/gender/male.png" alt="Male icon"><span>Male</span></label>
+							<label for="pokeform-gender-male"><img src="img/gender/male.png" alt="Male icon"><span>雄性</span></label>
 							<input type="radio" id="pokeform-gender-female" name="pokeform-gender" value="female" />
-							<label for="pokeform-gender-female"><img src="img/gender/female.png" alt="Female icon"><span>Female</span></label>
+							<label for="pokeform-gender-female"><img src="img/gender/female.png" alt="Female icon"><span>雌性</span></label>
 						</div>
-						<div id="pokeform-gender-unknown"><img src="img/gender/unknown.png" alt="Gender unknown icon"><span>Gender unknown</span></div>
+						<div id="pokeform-gender-unknown"><img src="img/gender/unknown.png" alt="Gender unknown icon"><span>性别不明</span></div>
 					</td>
 					<td id="pokeform-preview"><img src="img/ui/1x1.svg" alt="Pokémon preview"></td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-ball"><span class="asterisk">*</span>Poké Ball</label></th>
+					<th><label for="pokeform-ball"><span class="asterisk">*</span>精灵球</label></th>
 					<td colspan="2">
 						<select id="pokeform-ball" required>
 							<option></option>
-							<optgroup id="pokeform-ball-standard" label="Standard"></optgroup>
-							<optgroup id="pokeform-ball-hisui" label="Hisui"></optgroup>
+							<optgroup id="pokeform-ball-standard" label="普通"></optgroup>
+							<optgroup id="pokeform-ball-hisui" label="洗翠地区"></optgroup>
 						</select>
 					</td>
 				</tr>
 				<tr class="pokeform-tab4">
-					<th><label for="pokeform-title">Title</label></th>
+					<th><label for="pokeform-title">头衔</label></th>
 					<td>
 						<select id="pokeform-title" required>
-							<option selected>None</option>
+							<option value="None" selected>无</option>
 						</select>
 					</td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-lang"><span class="asterisk">*</span>Language</label></th>
+					<th><label for="pokeform-lang"><span class="asterisk">*</span>语言</label></th>
 					<td colspan="2">
 						<select id="pokeform-lang" required>
 							<option></option>
@@ -331,17 +331,17 @@
 					</td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-level"><span class="asterisk">*</span>Level</label></th>
+					<th><label for="pokeform-level"><span class="asterisk">*</span>等级</label></th>
 					<td colspan="2"><input id="pokeform-level" type="number" min="1" max="100" required></td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-scale">Scale</label></th>
+					<th><label for="pokeform-scale">尺寸</label></th>
 					<td colspan="2">
-						<div class="pokeform-scale-row"><input type="checkbox" id="pokeform-scale"> <label for="pokeform-scale">Checked in Mesagoza <img class="pokeform-scale-icon" src="img/marks/jumbo-mark.png" alt="Jumbo Mark" title="Jumbo Mark"><img class="pokeform-scale-icon" src="img/marks/mini-mark.png" alt="Mini Mark" title="Mini Mark"></label></div>
+						<div class="pokeform-scale-row"><input type="checkbox" id="pokeform-scale"> <label for="pokeform-scale">在桌台市检查 <img class="pokeform-scale-icon" src="img/marks/jumbo-mark.png" alt="Jumbo Mark" title="Jumbo Mark"><img class="pokeform-scale-icon" src="img/marks/mini-mark.png" alt="Mini Mark" title="Mini Mark"></label></div>
 					</td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-ot">Original Trainer</label></th>
+					<th><label for="pokeform-ot">初训家</label></th>
 					<td colspan="2"><input type="text" id="pokeform-ot" maxlength="15"></td>
 				</tr>
 				<tr class="pokeform-tab1">
@@ -349,7 +349,7 @@
 					<td colspan="2"><input type="text" inputmode="numeric" id="pokeform-idno" maxlength="6"></td>
 				</tr>
 				<tr class="pokeform-tab3">
-					<th><label for="pokeform-nature">Nature</label></th>
+					<th><label for="pokeform-nature">性格</label></th>
 					<td>
 						<select id="pokeform-nature">
 							<option></option>
@@ -357,49 +357,49 @@
 					</td>
 				</tr>
 				<tr class="pokeform-tab2">
-					<th><label for="pokeform-mint">Mint</label></th>
+					<th><label for="pokeform-mint">薄荷</label></th>
 					<td>
 						<select id="pokeform-mint"></select>
 					</td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-origin"><span class="asterisk">*</span>Origin Game</label></th>
+					<th><label for="pokeform-origin"><span class="asterisk">*</span>来源版本</label></th>
 					<td colspan="2">
 						<select id="pokeform-origin" required>
 							<option></option>
-							<optgroup id="pokeform-origin-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="pokeform-origin-7" label="Gen VII"></optgroup>
-							<optgroup id="pokeform-origin-6" label="Gen VI"></optgroup>
-							<optgroup id="pokeform-origin-5" label="Gen V"></optgroup>
-							<optgroup id="pokeform-origin-4" label="Gen IV"></optgroup>
-							<optgroup id="pokeform-origin-3" label="Gen III"></optgroup>
-							<optgroup id="pokeform-origin-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="pokeform-origin-1" label="Gen I Virtual Console"></optgroup>
+							<optgroup id="pokeform-origin-8" label="第八、九世代"></optgroup>
+							<optgroup id="pokeform-origin-7" label="第七世代"></optgroup>
+							<optgroup id="pokeform-origin-6" label="第六世代"></optgroup>
+							<optgroup id="pokeform-origin-5" label="第五世代"></optgroup>
+							<optgroup id="pokeform-origin-4" label="第四世代"></optgroup>
+							<optgroup id="pokeform-origin-3" label="第三世代"></optgroup>
+							<optgroup id="pokeform-origin-2" label="第二世代 虚拟主机"></optgroup>
+							<optgroup id="pokeform-origin-1" label="第一世代 虚拟主机"></optgroup>
 						</select>
 					</td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-currentgame">Current Game</label></th>
+					<th><label for="pokeform-currentgame">当前版本</label></th>
 					<td colspan="2">
 						<select id="pokeform-currentgame">
 							<option></option>
-							<optgroup id="pokeform-currentgame-storage" label="Storage"></optgroup>
-							<optgroup id="pokeform-currentgame-8" label="Gen VIII/IX"></optgroup>
-							<optgroup id="pokeform-currentgame-7" label="Gen VII"></optgroup>
-							<optgroup id="pokeform-currentgame-6" label="Gen VI"></optgroup>
-							<optgroup id="pokeform-currentgame-5" label="Gen V"></optgroup>
-							<optgroup id="pokeform-currentgame-4" label="Gen IV"></optgroup>
-							<optgroup id="pokeform-currentgame-3" label="Gen III"></optgroup>
-							<optgroup id="pokeform-currentgame-2" label="Gen II Virtual Console"></optgroup>
-							<optgroup id="pokeform-currentgame-1" label="Gen I Virtual Console"></optgroup>
+							<optgroup id="pokeform-currentgame-storage" label="存储系统"></optgroup>
+							<optgroup id="pokeform-currentgame-8" label="第八、九世代"></optgroup>
+							<optgroup id="pokeform-currentgame-7" label="第七世代"></optgroup>
+							<optgroup id="pokeform-currentgame-6" label="第六世代"></optgroup>
+							<optgroup id="pokeform-currentgame-5" label="第五世代"></optgroup>
+							<optgroup id="pokeform-currentgame-4" label="第四世代"></optgroup>
+							<optgroup id="pokeform-currentgame-3" label="第三世代"></optgroup>
+							<optgroup id="pokeform-currentgame-2" label="第二世代 虚拟主机"></optgroup>
+							<optgroup id="pokeform-currentgame-1" label="第一世代 虚拟主机"></optgroup>
 						</select>
 					</td>
 				</tr>
 				<tr class="pokeform-tab1">
-					<th><label for="pokeform-box">Box</label></th>
+					<th><label for="pokeform-box">盒子</label></th>
 					<td colspan="2">
 						<select id="pokeform-box">
-							<option selected value="-1">None</option>
+							<option selected value="-1">无</option>
 						</select>
 					</td>
 				</tr>
@@ -410,61 +410,61 @@
 					<td colspan="2"><textarea id="pokeform-notes" maxlength="50000" rows="10"></textarea></td>
 				</tr>
 				<tr class="pokeform-tab3">
-					<th><label for="pokeform-metlevel">Met Level</label></th>
+					<th><label for="pokeform-metlevel">相遇等级</label></th>
 					<td><input id="pokeform-metlevel" type="number" min="1" max="100"></td>
 				</tr>
 				<tr class="pokeform-tab3">
-					<th><label for="pokeform-metdate">Met Date</label></th>
+					<th><label for="pokeform-metdate">相遇日期</label></th>
 					<td><input id="pokeform-metdate" type="date"></td>
 				</tr>
 				<tr class="pokeform-tab3">
-					<th><label for="pokeform-characteristic">Characteristic</label></th>
+					<th><label for="pokeform-characteristic">个性</label></th>
 					<td>
 						<select id="pokeform-characteristic">
 							<option></option>
-							<option>Loves to eat</option>
-							<option value="Takes plenty of siestas">Takes plenty of siestas *</option>
-							<option value="Nods off a lot">Nods off a lot *</option>
-							<option>Scatters things often</option>
-							<option>Likes to relax</option>
-							<option>Proud of its power</option>
-							<option>Likes to thrash about</option>
-							<option>A little quick tempered</option>
-							<option>Likes to fight</option>
-							<option>Quick tempered</option>
-							<option>Sturdy body</option>
-							<option>Capable of taking hits</option>
-							<option>Highly persistent</option>
-							<option>Good endurance</option>
-							<option>Good perseverance</option>
-							<option>Highly curious</option>
-							<option>Mischievous</option>
-							<option>Thoroughly cunning</option>
-							<option>Often lost in thought</option>
-							<option>Very finicky</option>
-							<option>Strong willed</option>
-							<option>Somewhat vain</option>
-							<option>Strongly defiant</option>
-							<option>Hates to lose</option>
-							<option>Somewhat stubborn</option>
-							<option>Likes to run</option>
-							<option>Alert to sounds</option>
-							<option>Impetuous and silly</option>
-							<option>Somewhat of a clown</option>
-							<option>Quick to flee</option>
+							<option>非常喜欢吃东西</option>
+							<option value="经常睡午觉">经常睡午觉 *</option>
+							<option value="常常打瞌睡">常常打瞌睡 *</option>
+							<option>经常乱扔东西</option>
+							<option>喜欢悠然自在</option>
+							<option>以力气大为傲</option>
+							<option>喜欢胡闹</option>
+							<option>有点容易生气</option>
+							<option>喜欢打架</option>
+							<option>血气方刚</option>
+							<option>身体强壮</option>
+							<option>抗打能力强</option>
+							<option>顽强不屈</option>
+							<option>能吃苦耐劳</option>
+							<option>善于忍耐</option>
+							<option>好奇心强</option>
+							<option>喜欢恶作剧</option>
+							<option>做事万无一失</option>
+							<option>经常思考</option>
+							<option>一丝不苟</option>
+							<option>性格强势</option>
+							<option>有一点点爱慕虚荣</option>
+							<option>争强好胜</option>
+							<option>不服输</option>
+							<option>有一点点固执</option>
+							<option>喜欢比谁跑得快</option>
+							<option>对声音敏感</option>
+							<option>冒冒失失</option>
+							<option>有点容易得意忘形</option>
+							<option>逃得快</option>
 						</select>
 					</td>
 				</tr>
 				<tr class="pokeform-tab3">
-					<td colspan="2">* For Pokémon in Gen IV or Gen V games:
+					<td colspan="2">* 英文版中，第四世代和第五世代有两种个性翻译错位：
 						<ul>
-							<li>"Takes plenty of siestas" = "Often dozes off"</li>
-							<li>"Nods off a lot" = "Often scatters things"</li>
+							<li>「经常睡午觉」被翻译成「Nods off a lot」或「Often dozes off」。</li>
+							<li>「常常打瞌睡」被翻译成「Often scatters things」。</li>
 						</ul>
 					</td>
 				</tr>
 				<tr class="pokeform-tab2">
-					<th><label>IVs</label></th>
+					<th><label>个体值</label></th>
 					<td>
 						<div class="pokeform-stats">
 							<div>HP<br><input type="number" id="pokeform-iv-hp" min="0" max="31"></div>
@@ -477,7 +477,7 @@
 					</td>
 				</tr>
 				<tr class="pokeform-tab2">
-					<th><label>EVs</label></th>
+					<th><label>基础点数</label></th>
 					<td>
 						<div class="pokeform-stats">
 							<div>HP<br><input type="number" id="pokeform-ev-hp" min="0" max="255"></div>
@@ -490,335 +490,343 @@
 					</td>
 				</tr>
 				<tr class="pokeform-tab2">
-					<th><label for="pokeform-ability">Ability</label></th>
+					<th><label for="pokeform-ability">特性</label></th>
 					<td>
 						<select id="pokeform-ability">
 							<option></option>
-							<option>Adaptability</option>
-							<option>Aerilate</option>
-							<option>Aftermath</option>
-							<option>Air Lock</option>
-							<option>Analytic</option>
-							<option>Anger Point</option>
-							<option>Anger Shell</option>
-							<option>Anticipation</option>
-							<option>Arena Trap</option>
-							<option>Armor Tail</option>
-							<option>Aroma Veil</option>
-							<option>As One (Ice Rider)</option>
-							<option>As One (Shadow Rider)</option>
-							<option>Aura Break</option>
-							<option>Bad Dreams</option>
-							<option>Ball Fetch</option>
-							<option>Battery</option>
-							<option>Battle Armor</option>
-							<option>Battle Bond</option>
-							<option>Beads of Ruin</option>
-							<option>Beast Boost</option>
-							<option>Berserk</option>
-							<option>Big Pecks</option>
-							<option>Blaze</option>
-							<option>Bulletproof</option>
-							<option>Cheek Pouch</option>
-							<option>Chilling Neigh</option>
-							<option>Chlorophyll</option>
-							<option>Clear Body</option>
-							<option>Cloud Nine</option>
-							<option>Color Change</option>
-							<option>Comatose</option>
-							<option>Commander</option>
-							<option>Competitive</option>
-							<option>Compound Eyes</option>
-							<option>Contrary</option>
-							<option>Corrosion</option>
-							<option>Costar</option>
-							<option>Cotton Down</option>
-							<option>Cud Chew</option>
-							<option>Curious Medicine</option>
-							<option>Cursed Body</option>
-							<option>Cute Charm</option>
-							<option>Damp</option>
-							<option>Dancer</option>
-							<option>Dark Aura</option>
-							<option>Dauntless Shield</option>
-							<option>Dazzling</option>
-							<option>Defeatist</option>
-							<option>Defiant</option>
-							<option>Delta Stream</option>
-							<option>Desolate Land</option>
-							<option>Disguise</option>
-							<option>Download</option>
-							<option>Dragon’s Maw</option>
-							<option>Drizzle</option>
-							<option>Drought</option>
-							<option>Dry Skin</option>
-							<option>Early Bird</option>
-							<option>Earth Eater</option>
-							<option>Effect Spore</option>
-							<option>Electric Surge</option>
-							<option>Electromorphosis</option>
-							<option>Emergency Exit</option>
-							<option>Fairy Aura</option>
-							<option>Filter</option>
-							<option>Flame Body</option>
-							<option>Flare Boost</option>
-							<option>Flash Fire</option>
-							<option>Flower Gift</option>
-							<option>Flower Veil</option>
-							<option>Fluffy</option>
-							<option>Forecast</option>
-							<option>Forewarn</option>
-							<option>Friend Guard</option>
-							<option>Frisk</option>
-							<option>Full Metal Body</option>
-							<option>Fur Coat</option>
-							<option>Gale Wings</option>
-							<option>Galvanize</option>
-							<option>Gluttony</option>
-							<option>Good as Gold</option>
-							<option>Gooey</option>
-							<option>Gorilla Tactics</option>
-							<option>Grass Pelt</option>
-							<option>Grassy Surge</option>
-							<option>Grim Neigh</option>
-							<option>Guard Dog</option>
-							<option>Gulp Missile</option>
-							<option>Guts</option>
-							<option>Hadron Engine</option>
-							<option>Harvest</option>
-							<option>Healer</option>
-							<option>Heatproof</option>
-							<option>Heavy Metal</option>
-							<option>Honey Gather</option>
-							<option>Huge Power</option>
-							<option>Hunger Switch</option>
-							<option>Hustle</option>
-							<option>Hydration</option>
-							<option>Hyper Cutter</option>
-							<option>Ice Body</option>
-							<option>Ice Face</option>
-							<option>Ice Scales</option>
-							<option>Illuminate</option>
-							<option>Illusion</option>
-							<option>Immunity</option>
-							<option>Imposter</option>
-							<option>Infiltrator</option>
-							<option>Innards Out</option>
-							<option>Inner Focus</option>
-							<option>Insomnia</option>
-							<option>Intimidate</option>
-							<option>Intrepid Sword</option>
-							<option>Iron Barbs</option>
-							<option>Iron Fist</option>
-							<option>Justified</option>
-							<option>Keen Eye</option>
-							<option>Klutz</option>
-							<option>Leaf Guard</option>
-							<option>Levitate</option>
-							<option>Libero</option>
-							<option>Light Metal</option>
-							<option>Lightning Rod</option>
-							<option>Limber</option>
-							<option>Lingering Aroma</option>
-							<option>Liquid Ooze</option>
-							<option>Liquid Voice</option>
-							<option>Long Reach</option>
-							<option>Magic Bounce</option>
-							<option>Magic Guard</option>
-							<option>Magician</option>
-							<option>Magma Armor</option>
-							<option>Magnet Pull</option>
-							<option>Marvel Scale</option>
-							<option>Mega Launcher</option>
-							<option>Merciless</option>
-							<option>Mimicry</option>
-							<option>Minus</option>
-							<option>Mirror Armor</option>
-							<option>Misty Surge</option>
-							<option>Mold Breaker</option>
-							<option>Moody</option>
-							<option>Motor Drive</option>
-							<option>Moxie</option>
-							<option>Multiscale</option>
-							<option>Multitype</option>
-							<option>Mummy</option>
-							<option>Mycelium Might</option>
-							<option>Natural Cure</option>
-							<option>Neuroforce</option>
-							<option>Neutralizing Gas</option>
-							<option>No Guard</option>
-							<option>Normalize</option>
-							<option>Oblivious</option>
-							<option>Opportunist</option>
-							<option>Orichalcum Pulse</option>
-							<option>Overcoat</option>
-							<option>Overgrow</option>
-							<option>Own Tempo</option>
-							<option>Parental Bond</option>
-							<option>Pastel Veil</option>
-							<option>Perish Body</option>
-							<option>Pickpocket</option>
-							<option>Pickup</option>
-							<option>Pixilate</option>
-							<option>Plus</option>
-							<option>Poison Heal</option>
-							<option>Poison Point</option>
-							<option>Poison Touch</option>
-							<option>Power Construct</option>
-							<option>Power of Alchemy</option>
-							<option>Power Spot</option>
-							<option>Prankster</option>
-							<option>Pressure</option>
-							<option>Primordial Sea</option>
-							<option>Prism Armor</option>
-							<option>Propeller Tail</option>
-							<option>Protean</option>
-							<option>Protosynthesis</option>
-							<option>Psychic Surge</option>
-							<option>Punk Rock</option>
-							<option>Pure Power</option>
-							<option>Purifying Salt</option>
-							<option>Quark Drive</option>
-							<option>Queenly Majesty</option>
-							<option>Quick Draw</option>
-							<option>Quick Feet</option>
-							<option>Rain Dish</option>
-							<option>Rattled</option>
-							<option>Receiver</option>
-							<option>Reckless</option>
-							<option>Refrigerate</option>
-							<option>Regenerator</option>
-							<option>Ripen</option>
-							<option>Rivalry</option>
-							<option>RKS System</option>
-							<option>Rock Head</option>
-							<option>Rocky Payload</option>
-							<option>Rough Skin</option>
-							<option>Run Away</option>
-							<option>Sand Force</option>
-							<option>Sand Rush</option>
-							<option>Sand Spit</option>
-							<option>Sand Stream</option>
-							<option>Sand Veil</option>
-							<option>Sap Sipper</option>
-							<option>Schooling</option>
-							<option>Scrappy</option>
-							<option>Screen Cleaner</option>
-							<option>Seed Sower</option>
-							<option>Serene Grace</option>
-							<option>Shadow Shield</option>
-							<option>Shadow Tag</option>
-							<option>Sharpness</option>
-							<option>Shed Skin</option>
-							<option>Sheer Force</option>
-							<option>Shell Armor</option>
-							<option>Shield Dust</option>
-							<option>Shields Down</option>
-							<option>Simple</option>
-							<option>Skill Link</option>
-							<option>Slow Start</option>
-							<option>Slush Rush</option>
-							<option>Sniper</option>
-							<option>Snow Cloak</option>
-							<option>Snow Warning</option>
-							<option>Solar Power</option>
-							<option>Solid Rock</option>
-							<option>Soul-Heart</option>
-							<option>Soundproof</option>
-							<option>Speed Boost</option>
-							<option>Stakeout</option>
-							<option>Stall</option>
-							<option>Stalwart</option>
-							<option>Stamina</option>
-							<option>Stance Change</option>
-							<option>Static</option>
-							<option>Steadfast</option>
-							<option>Steam Engine</option>
-							<option>Steelworker</option>
-							<option>Steely Spirit</option>
-							<option>Stench</option>
-							<option>Sticky Hold</option>
-							<option>Storm Drain</option>
-							<option>Strong Jaw</option>
-							<option>Sturdy</option>
-							<option>Suction Cups</option>
-							<option>Super Luck</option>
-							<option>Supreme Overlord</option>
-							<option>Surge Surfer</option>
-							<option>Swarm</option>
-							<option>Sweet Veil</option>
-							<option>Swift Swim</option>
-							<option>Sword of Ruin</option>
-							<option>Symbiosis</option>
-							<option>Synchronize</option>
-							<option>Tablets of Ruin</option>
-							<option>Tangled Feet</option>
-							<option>Tangling Hair</option>
-							<option>Technician</option>
-							<option>Telepathy</option>
-							<option>Teravolt</option>
-							<option>Thermal Exchange</option>
-							<option>Thick Fat</option>
-							<option>Tinted Lens</option>
-							<option>Torrent</option>
-							<option>Tough Claws</option>
-							<option>Toxic Boost</option>
-							<option>Toxic Debris</option>
-							<option>Trace</option>
-							<option>Transistor</option>
-							<option>Triage</option>
-							<option>Truant</option>
-							<option>Turboblaze</option>
-							<option>Unaware</option>
-							<option>Unburden</option>
-							<option>Unnerve</option>
-							<option>Unseen Fist</option>
-							<option>Vessel of Ruin</option>
-							<option>Victory Star</option>
-							<option>Vital Spirit</option>
-							<option>Volt Absorb</option>
-							<option>Wandering Spirit</option>
-							<option>Water Absorb</option>
-							<option>Water Bubble</option>
-							<option>Water Compaction</option>
-							<option>Water Veil</option>
-							<option>Weak Armor</option>
-							<option>Well-Baked Body</option>
-							<option>White Smoke</option>
-							<option>Wimp Out</option>
-							<option>Wind Power</option>
-							<option>Wind Rider</option>
-							<option>Wonder Guard</option>
-							<option>Wonder Skin</option>
-							<option>Zen Mode</option>
-							<option>Zero to Hero</option>
+							<option>ＡＲ系统</option>
+							<option>暗黑气场</option>
+							<option>白色烟雾</option>
+							<option>搬岩</option>
+							<option>孢子</option>
+							<option>薄雾制造者</option>
+							<option>饱了又饿</option>
+							<option>笨拙</option>
+							<option>避雷针</option>
+							<option>变幻自如</option>
+							<option>变色</option>
+							<option>变身者</option>
+							<option>冰冻皮肤</option>
+							<option>冰冻之躯</option>
+							<option>冰鳞粉</option>
+							<option>拨沙</option>
+							<option>拨雪</option>
+							<option>不服输</option>
+							<option>不眠</option>
+							<option>不挠之剑</option>
+							<option>不屈之盾</option>
+							<option>不屈之心</option>
+							<option>不仁不义</option>
+							<option>采蜜</option>
+							<option>踩影</option>
+							<option>苍白嘶鸣</option>
+							<option>草之毛皮</option>
+							<option>察觉</option>
+							<option>唱反调</option>
+							<option>超级发射器</option>
+							<option>超幸运</option>
+							<option>乘风</option>
+							<option>迟钝</option>
+							<option>持久力</option>
+							<option>冲浪之尾</option>
+							<option>虫之预感</option>
+							<option>除障</option>
+							<option>储水</option>
+							<option>穿透</option>
+							<option>纯朴</option>
+							<option>磁力</option>
+							<option>粗糙皮肤</option>
+							<option>达摩模式</option>
+							<option>大将</option>
+							<option>大力士</option>
+							<option>单纯</option>
+							<option>胆量</option>
+							<option>胆怯</option>
+							<option>德尔塔气流</option>
+							<option>电晶体</option>
+							<option>电力转换</option>
+							<option>电气皮肤</option>
+							<option>电气引擎</option>
+							<option>电气制造者</option>
+							<option>掉出种子</option>
+							<option>斗争心</option>
+							<option>毒刺</option>
+							<option>毒傀儡</option>
+							<option>毒疗</option>
+							<option>毒满地</option>
+							<option>毒手</option>
+							<option>毒锁链</option>
+							<option>蹲守</option>
+							<option>多属性</option>
+							<option>多重鳞片</option>
+							<option>恶臭</option>
+							<option>恶作剧之心</option>
+							<option>发光</option>
+							<option>发号施令</option>
+							<option>反刍</option>
+							<option>芳香幕</option>
+							<option>防尘</option>
+							<option>防弹</option>
+							<option>飞出的内在物</option>
+							<option>飞行皮肤</option>
+							<option>飞毛腿</option>
+							<option>绯红脉动</option>
+							<option>分析</option>
+							<option>粉彩护幕</option>
+							<option>愤怒甲壳</option>
+							<option>愤怒穴位</option>
+							<option>风力发电</option>
+							<option>锋锐</option>
+							<option>腐蚀</option>
+							<option>负电</option>
+							<option>复眼</option>
+							<option>复制</option>
+							<option>甘露之蜜</option>
+							<option>干劲</option>
+							<option>干燥皮肤</option>
+							<option>钢能力者</option>
+							<option>钢之意志</option>
+							<option>隔音</option>
+							<option>跟风</option>
+							<option>共生</option>
+							<option>古代活性</option>
+							<option>怪力钳</option>
+							<option>怪药</option>
+							<option>归零化境</option>
+							<option>过滤</option>
+							<option>好胜</option>
+							<option>恒净之躯</option>
+							<option>厚脂肪</option>
+							<option>花幕</option>
+							<option>花之礼</option>
+							<option>化学变化气体</option>
+							<option>化学之力</option>
+							<option>画皮</option>
+							<option>幻觉</option>
+							<option>幻影防守</option>
+							<option>黄金之躯</option>
+							<option>魂心</option>
+							<option>活力</option>
+							<option>火焰之躯</option>
+							<option>激流</option>
+							<option>疾风之翼</option>
+							<option>技术高手</option>
+							<option>加速</option>
+							<option>颊囊</option>
+							<option>坚毅</option>
+							<option>坚硬脑袋</option>
+							<option>坚硬岩石</option>
+							<option>捡球</option>
+							<option>捡拾</option>
+							<option>健壮胸肌</option>
+							<option>降雪</option>
+							<option>降雨</option>
+							<option>焦香之躯</option>
+							<option>接球手</option>
+							<option>洁净之盐</option>
+							<option>结冻头</option>
+							<option>结实</option>
+							<option>界限盾壳</option>
+							<option>金属防护</option>
+							<option>紧张感</option>
+							<option>精神力</option>
+							<option>精神制造者</option>
+							<option>静电</option>
+							<option>镜甲</option>
+							<option>狙击手</option>
+							<option>卷发</option>
+							<option>绝对睡眠</option>
+							<option>菌丝之力</option>
+							<option>看门犬</option>
+							<option>夸克充能</option>
+							<option>款待</option>
+							<option>懒惰</option>
+							<option>棱镜装甲</option>
+							<option>连续攻击</option>
+							<option>鳞粉</option>
+							<option>龙颚</option>
+							<option>螺旋尾鳍</option>
+							<option>慢出</option>
+							<option>慢启动</option>
+							<option>毛皮大衣</option>
+							<option>毛茸茸</option>
+							<option>茂盛</option>
+							<option>猛火</option>
+							<option>梦魇</option>
+							<option>迷人之躯</option>
+							<option>棉絮</option>
+							<option>免疫</option>
+							<option>面影辉映</option>
+							<option>灭亡之躯</option>
+							<option>魔法防守</option>
+							<option>魔法镜</option>
+							<option>魔术师</option>
+							<option>木乃伊</option>
+							<option>耐热</option>
+							<option>脑核之力</option>
+							<option>能量点</option>
+							<option>拟态</option>
+							<option>黏滑</option>
+							<option>黏着</option>
+							<option>怒火冲天</option>
+							<option>女王的威严</option>
+							<option>蹒跚</option>
+							<option>庞克摇滚</option>
+							<option>飘浮</option>
+							<option>破格</option>
+							<option>漆黑嘶鸣</option>
+							<option>奇迹皮肤</option>
+							<option>气场破坏</option>
+							<option>气闸</option>
+							<option>牵绊变身</option>
+							<option>强行</option>
+							<option>强壮之颚</option>
+							<option>强子引擎</option>
+							<option>亲子爱</option>
+							<option>青草制造者</option>
+							<option>轻金属</option>
+							<option>轻装</option>
+							<option>全能变身</option>
+							<option>群聚变形</option>
+							<option>热交换</option>
+							<option>人马一体</option>
+							<option>日照</option>
+							<option>熔岩铠甲</option>
+							<option>柔软</option>
+							<option>软弱</option>
+							<option>锐利目光</option>
+							<option>沙穴</option>
+							<option>沙隐</option>
+							<option>沙之力</option>
+							<option>舍身</option>
+							<option>神奇鳞片</option>
+							<option>神奇守护</option>
+							<option>胜利之星</option>
+							<option>湿气</option>
+							<option>湿润之躯</option>
+							<option>湿润之声</option>
+							<option>食草</option>
+							<option>食土</option>
+							<option>始源之海</option>
+							<option>适应力</option>
+							<option>收获</option>
+							<option>受热激升</option>
+							<option>熟成</option>
+							<option>甩不掉的气味</option>
+							<option>水幕</option>
+							<option>水泡</option>
+							<option>顺手牵羊</option>
+							<option>速击</option>
+							<option>碎裂铠甲</option>
+							<option>太晶变形</option>
+							<option>太晶甲壳</option>
+							<option>太阳之力</option>
+							<option>贪吃鬼</option>
+							<option>逃跑</option>
+							<option>天恩</option>
+							<option>甜幕</option>
+							<option>铁刺</option>
+							<option>铁拳</option>
+							<option>同步</option>
+							<option>同台共演</option>
+							<option>吐沙</option>
+							<option>蜕皮</option>
+							<option>危险回避</option>
+							<option>危险预知</option>
+							<option>威吓</option>
+							<option>尾甲</option>
+							<option>涡轮火焰</option>
+							<option>我行我素</option>
+							<option>污泥浆</option>
+							<option>无防守</option>
+							<option>无关天气</option>
+							<option>无形拳</option>
+							<option>舞者</option>
+							<option>吸盘</option>
+							<option>下载</option>
+							<option>先行治疗</option>
+							<option>鲜艳之躯</option>
+							<option>心灵感应</option>
+							<option>心情不定</option>
+							<option>心眼</option>
+							<option>蓄电</option>
+							<option>蓄电池</option>
+							<option>雪隐</option>
+							<option>压迫感</option>
+							<option>扬沙</option>
+							<option>妖精皮肤</option>
+							<option>妖精气场</option>
+							<option>叶绿素</option>
+							<option>叶子防守</option>
+							<option>一般皮肤</option>
+							<option>一口导弹</option>
+							<option>一猩一意</option>
+							<option>异兽提升</option>
+							<option>毅力</option>
+							<option>阴晴不定</option>
+							<option>引爆</option>
+							<option>引火</option>
+							<option>引水</option>
+							<option>硬壳盔甲</option>
+							<option>硬爪</option>
+							<option>悠游自如</option>
+							<option>游魂</option>
+							<option>友情防守</option>
+							<option>有色眼镜</option>
+							<option>鱼群</option>
+							<option>瑜伽之力</option>
+							<option>雨盘</option>
+							<option>预知梦</option>
+							<option>遇水凝固</option>
+							<option>远隔</option>
+							<option>跃跃欲逃</option>
+							<option>灾祸之鼎</option>
+							<option>灾祸之简</option>
+							<option>灾祸之剑</option>
+							<option>灾祸之玉</option>
+							<option>再生力</option>
+							<option>早起</option>
+							<option>战斗盔甲</option>
+							<option>战斗切换</option>
+							<option>兆级电压</option>
+							<option>蒸汽机</option>
+							<option>正电</option>
+							<option>正义之心</option>
+							<option>治愈之心</option>
+							<option>中毒激升</option>
+							<option>终结之地</option>
+							<option>重金属</option>
+							<option>自然回复</option>
+							<option>自信过度</option>
+							<option>自由者</option>
+							<option>诅咒之躯</option>
 						</select>
 					</td>
 				</tr>
 				<tr class="pokeform-tab2">
-					<td colspan="2">All Stats fields are optional for your own record-keeping. Stats info will not affect the site's Ribbon guidance for your Pokémon.</td>
+					<td colspan="2">所有有关能力的字段可根据您自己的记录需求选择填写。能力信息与网站对宝可梦的奖章指导没有关联。</td>
 				</tr>
 			</table>
 			<h5>
-				<button id="pokeform-add" class="button">Add</button>
-				<button id="pokeform-edit" class="button">Save</button>
-				<span id="pokeform-cancel" class="button">Cancel</a>
+				<button id="pokeform-add" class="button">新建</button>
+				<button id="pokeform-edit" class="button">保存</button>
+				<span id="pokeform-cancel" class="button">取消</a>
 			</h5>
 		</div>
 		<div id="ribbonguide" class="modal">
 			<h4>
-				<div>Ribbon Guide</div>
+				<div>奖章指导</div>
 			</h4>
 			<div id="ribbonguide-info">
 				<img src="img/ui/1x1.svg" alt="Sprite">
 				<div>
 					<div><span class="name"></span></div>
-					<div><span>Level:</span> <span class="level"></span> <span class="metlevel"></span></div>
-					<div><span>Game:</span> <span class="game"></span> <span class="metgame"></span></div>
+					<div><span>等级：</span><span class="level"></span><span class="metlevel"></span></div>
+					<div><span>版本：</span><span class="game"></span><span class="metgame"></span></div>
 				</div>
 			</div>
 			<div id="ribbonguide-warnings" class="active">
-				<div id="ribbonguide-warnings-toggle"><span>Warnings</span></div>
+				<div id="ribbonguide-warnings-toggle"><span>警告</span></div>
 				<ul>
 					<li id="ribbonguide-notice"></li>
 					<li id="ribbonguide-timelimited"></li>
@@ -830,25 +838,25 @@
 			</div>
 			<div id="ribbonguide-transfer"></div>
 			<h5>
-				<span class="button close">Close</span>
+				<span class="button close">关闭</span>
 			</h5>
 		</div>
 		<div id="settings" class="modal">
 			<h4>
-				<div>Settings</div>
+				<div>设置</div>
 			</h4>
 			<table id="settings-buttons">
 				<tr>
-					<th><label for="settings-theme">Theme</label></th>
+					<th><label for="settings-theme">主题</label></th>
 					<td>
 						<select id="settings-theme">
-							<optgroup label="Dark">
+							<optgroup label="深色">
 								<option value="start">Start Menu</option>
 								<option value="naranja">Naranja Academy</option>
 								<option value="uva">Uva Academy</option>
 								<option value="dark">Classic Dark</option>
 							</optgroup>
-							<optgroup label="Light">
+							<optgroup label="浅色">
 								<option value="sword">Intrepid Sword</option>
 								<option value="shield">Dauntless Shield</option>
 								<option value="light">Classic Light</option>
@@ -857,39 +865,39 @@
 					</td>
 				</tr>
 				<tr style="display:none;">
-					<th><label for="settings-language">Language</label></th>
+					<th><label for="settings-language">语言</label></th>
 					<td>
 						<select id="settings-language"></select>
 					</td>
 				</tr>
 				<tr>
-					<th><label>Data</label></th>
+					<th><label>数据</label></th>
 					<td>
-						<span class="button" id="backup">Backup</span>
-						<label class="button" id="restore">Restore<input type="file" id="restoreinput" accept="application/json"></label>
+						<span class="button" id="backup">备份</span>
+						<label class="button" id="restore">还原<input type="file" id="restoreinput" accept="application/json"></label>
 					</td>
 				</tr>
 				<tr>
-					<th><label>Changes</label></th>
+					<th><label>更新</label></th>
 					<td>
-						<span class="button" id="view-changelog">Changelog</span>
-						<a href="https://github.com/Azekthi/Ribbons.Guide/commits/main" class="button" target="_blank">Commits</a>
+						<span class="button" id="view-changelog">更新日志</span>
+						<a href="https://github.com/Azekthi/Ribbons.Guide/commits/main" class="button" target="_blank">提交日志</a>
 					</td>
 				</tr>
 				<tr id="settings-about">
 					<td colspan="2">
-						<div>The images used in Ribbons.Guide were provided by <a href="https://pokejungle.net">PokéJungle</a>, <a href="https://pokemondb.net">Pokémon Database</a>, <a href="https://github.com/msikma/pokesprite">PokéSprite</a>, <a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>, <a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a>, and <a href="https://github.com/google/material-design-icons">Material Symbols</a>. Ribbons.Guide also makes use of <a href="https://github.com/jquery/jquery">jQuery</a>, <a href="https://github.com/jquery/jquery-ui">jQuery UI</a>, <a href="https://github.com/RWAP/jquery-ui-touch-punch">jQuery UI Touch Punch</a>, <a href="https://github.com/kylefox/jquery-modal">jQuery Modal</a>, <a href="https://github.com/select2/select2">Select2</a>, <a href="https://github.com/TalAter/UpUp">UpUp</a>, and <a href="https://fonts.google.com/">Google Fonts</a>.</div>
-						<div>Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>.</div>
+						<div>Ribbons.Guide使用的图片来源于：<a href="https://pokejungle.net">PokéJungle</a>，<a href="https://pokemondb.net">Pokémon Database</a>，<a href="https://github.com/msikma/pokesprite">PokéSprite</a>，<a href="https://archives.bulbagarden.net/wiki/Main_Page">Bulbagarden Archives</a>，<a href="https://github.com/PokeMiners/pogo_assets">Pokémon GO Assets</a> 和 <a href="https://github.com/google/material-design-icons">Material Symbols</a>。Ribbons.Guide同时也使用了：<a href="https://github.com/jquery/jquery">jQuery</a>，<a href="https://github.com/jquery/jquery-ui">jQuery UI</a>，<a href="https://github.com/RWAP/jquery-ui-touch-punch">jQuery UI Touch Punch</a>，<a href="https://github.com/kylefox/jquery-modal">jQuery Modal</a>，<a href="https://github.com/select2/select2">Select2</a>，<a href="https://github.com/TalAter/UpUp">UpUp</a> 和 <a href="https://fonts.google.com/">Google Fonts</a>。</div>
+						<div>宝可梦，数据和图片的版权归 © Nintendo/Creatures Inc./Game Freak所有。本项目与Nintendo、Creatures Inc.、Game Freak或者The Pokémon Company无关。所有原创内容和代码受<a href="https://opensource.org/license/gpl-3-0/">GPL-3.0 license</a>约束。</div>
 					</td>
 				</tr>
 			</table>
 			<h5>
-				<span class="button close">Close</span>
+				<span class="button close">关闭</span>
 			</h5>
 		</div>
 		<div id="changelog" class="modal">
 			<h4>
-				<div>Changelog</div>
+				<div>更新日志</div>
 			</h4>
 			<table>
 				<tr>
@@ -897,9 +905,9 @@
 				</tr>
 			</table>
 			<h5>
-				<span class="button close">Close</span>
+				<span class="button close">关闭</span>
 			</h5>
 		</div>
-		<footer><span id="footer-text">This open-source project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All data is stored in your browser. <a href="https://github.com/Azekthi/Ribbons.Guide">View the source code on GitHub.</a></span><span id="footer-icon">»</span></footer>
+		<footer><span id="footer-text">本开源项目与Nintendo、Creatures Inc.、Game Freak或者The Pokémon Company无关。所有数据都保存在您的浏览器中。 <a href="https://github.com/Azekthi/Ribbons.Guide">您可以在GitHub上查看源代码。</a></span><span id="footer-icon">»</span></footer>
 	</body>
 </html>

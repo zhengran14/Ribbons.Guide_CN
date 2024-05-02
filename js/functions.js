@@ -243,7 +243,7 @@ function resetForm(){
 }
 
 function confirmFormClose(){
-	if(confirm("Are you sure you wish to cancel? All of your changes will be lost!")) $.modal.close();
+	if(confirm("是否确定要取消？您所有的更改都将丢失！")) $.modal.close();
 }
 
 function editPkmn(id){
@@ -292,7 +292,7 @@ function editPkmn(id){
 
 function deletePkmn(id){
 	var name = $(".pokemon-list-entry[data-pokemon="+id+"]").find(".pokemon-list-name").text();
-	if(confirm("Are you sure? All of " + name + "'s data will be permanently erased!")){
+	if(confirm("是否确定删除这只宝可梦？「" + name + "」的所有数据会被立刻清除！")){
 		allpkmn = JSON.parse(localStorage.getItem("pokemon"));
 		delete allpkmn.entries[id];
 		allpkmn.entries = allpkmn.entries.filter(Boolean);
@@ -310,7 +310,7 @@ function boxSortDialog(popup = false){
 		}
 		$("#boxsort-boxes").html(html);
 	} else {
-		$("#boxsort-boxes").html("You don't have any boxes!");
+		$("#boxsort-boxes").html("您没有任何盒子。");
 	}
 	if(popup) showModal("boxsort");
 }
@@ -318,7 +318,7 @@ function boxSortDialog(popup = false){
 function deleteBox(id){
 	var allboxes = JSON.parse(localStorage.getItem("boxes"));
 	var name = allboxes.entries[id];
-	if(confirm("Are you sure? All of the Pokémon in " + name + " will become unsorted.")){
+	if(confirm("是否确定删除这个盒子？「" + name + "」中的所有宝可梦会变得无序。")){
 		delete allboxes.entries[id];
 		allboxes.entries = allboxes.entries.filter(Boolean);
 		localStorage.setItem("boxes", JSON.stringify(allboxes));
@@ -360,9 +360,9 @@ function ribbonGuide(id){
 				$("#ribbonguide-info .name").text(name + " " + title);
 			}
 			$("#ribbonguide .level").text(pkmn.level);
-			if(pkmn.metlevel) $("#ribbonguide .metlevel").text(" (met at "+pkmn.metlevel+")");
+			if(pkmn.metlevel) $("#ribbonguide .metlevel").text("（相遇："+pkmn.metlevel+"）");
 			$("#ribbonguide .game").text(games[pkmn.currentgame].name);
-			$("#ribbonguide .metgame").text(" (met in "+games[pkmn.origin].name+")");
+			$("#ribbonguide .metgame").text("（相遇："+games[pkmn.origin].name+"）");
 
 			// get current and future gens
 			var curGen = parseInt(games[pkmn.currentgame].gen);
@@ -397,7 +397,7 @@ function ribbonGuide(id){
 				// Totem-sized versions of these four cannot leave USUM
 				if((pkmn.origin === "usun" || pkmn.origin === "umoon") && (pkmn.currentgame === "usun" || pkmn.currentgame === "umoon")){
 					noWarnings = false;
-					$("#ribbonguide-totem").html("If " + name + " is a Totem-sized Pokémon, " + name + " cannot leave " + terms.gens[7] + ".");
+					$("#ribbonguide-totem").html("如果「" + name + "」是霸主宝可梦，它则无法离开" + terms.gens[7] + "。");
 				}
 			}
 
@@ -456,7 +456,7 @@ function ribbonGuide(id){
 										if(parseInt(pkmn.level) < 51){
 											specialEarn = true;
 											noWarnings = false;
-											$("#ribbonguide-winning").html("Leveling " + name + " above Lv.50 will make the Winning Ribbon unavailable!");
+											$("#ribbonguide-winning").html("将「" + name + "」的等级提升到50级以上（不包括50级）将无法获得「成功奖章」！");
 										}
 									} else if(ribbon == "national-ribbon"){
 										if(pkmn.origin == "colosseum" || pkmn.origin == "xd"){
@@ -483,9 +483,9 @@ function ribbonGuide(id){
 													// BUT if the player levels the Pokemon to 71+, Footprint will be blocked
 													noWarnings = false;
 													if(curGen < 5){
-														$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon exclusive to "+terms.gens[4]+"!");
+														$("#ribbonguide-footprint").html("将「" + name + "」的等级提升到70级以上（不包括70级）将无法在"+terms.gens[4]+"之后获得「脚印奖章」！");
 													} else if(virtualConsole){
-														$("#ribbonguide-footprint").html("Leveling " + name + " above Lv.70 will make the Footprint Ribbon unavailable!");
+														$("#ribbonguide-footprint").html("将「" + name + "」的等级提升到70级以上（不包括70级）将无法获得「脚印奖章」！");
 													}
 												}
 											} else {
@@ -509,7 +509,7 @@ function ribbonGuide(id){
 														} else {
 															// otherwise, if Footprint is not guaranteed, warn the user
 															noWarnings = false;
-															$("#ribbonguide-notice").html(name + "'s Met Level has not been set. The availability of the Footprint Ribbon after "+terms.gens[4]+" cannot be determined.");
+															$("#ribbonguide-notice").html("请设置「" + name + "」的「遇见等级」，否则无法确定在" + terms.gens[4] + "之后是否可以获得「脚印奖章」。");
 														}
 													}
 												}
@@ -548,7 +548,7 @@ function ribbonGuide(id){
 							var rFldr = "ribbons";
 							if(rData["mark"]) rFldr = "marks";
 							var rDesc = "";
-							if(rData.descs) rDesc = rData.descs.eng;
+							if(rData.descs) rDesc = rData.descs.chs;
 							var optClass = "";
 							if(allRibbons[ribbon].optional){
 								if(ribbon == "jumbo-mark" || ribbon == "mini-mark"){
@@ -559,7 +559,7 @@ function ribbonGuide(id){
 									optClass = " ribbon-optional";
 								}
 							}
-							var rImage = "<span class='"+optClass+"'><img class='" + ribbon + "' src='img/" + rFldr + "/" + ribbon + ".png' alt=\"" + rData.names.eng + "\" title=\"" + rData.names.eng + " - " + rDesc + "\"></span>";
+							var rImage = "<span class='"+optClass+"'><img class='" + ribbon + "' src='img/" + rFldr + "/" + ribbon + ".png' alt=\"" + rData.names.chs + "\" title=\"" + rData.names.chs + " - " + rDesc + "\"></span>";
 							// add Ribbon to each gen
 							for(var i = 0; i < ribbonAddToGens.length; i++){
 								var eleGen = "#ribbonguide-transfer-" + ribbonAddToGens[i];
@@ -581,7 +581,7 @@ function ribbonGuide(id){
 				if(testGen <= parseInt(evoWarnGen)){
 					noWarnings = false;
 					var evoWarnNames = getData(evoWarnMon, "names");
-					var evoWarnName = evoWarnNames.eng;
+					var evoWarnName = evoWarnNames.chs;
 					var evoWarnForms = getData(evoWarnMon, "forms");
 					if(!evoWarnForms){
 						evoWarnForms = getData(evoWarnMon, "forms-all");
@@ -593,9 +593,9 @@ function ribbonGuide(id){
 						}
 					}
 					if(evoWarnForms){
-						evoWarnName = evoWarnName + " (" + evoWarnForms.eng + ")";
+						evoWarnName = evoWarnName + " (" + evoWarnForms.chs + ")";
 					}
-					$("#ribbonguide-evolution").html("Evolving " + name + " into " + evoWarnName + " may change the availability of certain Ribbons!");
+					$("#ribbonguide-evolution").html("将「" + name + "」进化为「" + evoWarnName + "」可能会导致无法获得某些奖章！");
 				}
 			}
 			if(noRibbons){
@@ -608,10 +608,10 @@ function ribbonGuide(id){
 			}
 			showModal("ribbonguide");
 		} else {
-			alert("You need to set " + name + "'s current level to get Ribbon guidance!");
+			alert("您需要给" + name + "设置「当前等级」才能获得奖章指导。");
 		}
 	} else {
-		alert("You need to set " + name + "'s current game to get Ribbon guidance!");
+		alert("您需要给" + name + "设置「当前版本」才能获得奖章指导。");
 	}
 }
 
@@ -695,7 +695,7 @@ function addRow(pkmn, i){
 
 	var timeLimited = ""; // data-timelimited='true'
 
-	var ribbons = "<div class='ribbons-list-empty'>This Pokémon has no ribbons.</div>";
+	var ribbons = "<div class='ribbons-list-empty'>这只宝可梦没有任何证章。</div>";
 	var r;
 	var mergeBattle = 0;
 	var mergeContest = 0;
@@ -732,8 +732,8 @@ function addRow(pkmn, i){
 				proceed = true;
 			}
 			if(proceed){
-				var rName = rData["names"]["eng"];
-				if(rData["descs"]) rDesc = rDesc + " - " + rData["descs"]["eng"];
+				var rName = rData["names"]["chs"];
+				if(rData["descs"]) rDesc = rDesc + " - " + rData["descs"]["chs"];
 				var rFldr = "ribbons";
 				if(rData["mark"]) rFldr = "marks";
 				ribbons = ribbons + "<img class='" + rCode + "' src='img/" + rFldr + "/" + rCode + ".png' alt=\"" + rName + "\" title=\"" + rName + rDesc + "\">";
@@ -760,7 +760,7 @@ function addRow(pkmn, i){
 	if(titleBon !== "None"){
 		if(titleBon.indexOf("-mark") > 0) titleDir = "marks";
 
-		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt=\""+allRibbons[titleBon]["names"]["eng"]+"\"><span>" + allRibbons[titleBon]["titles"]["eng"].replace(/\[.*\]/, pkmn.ot) + "</span>";
+		title = "<img src='img/" + titleDir + "/" + titleBon + ".png' alt=\""+allRibbons[titleBon]["names"]["chs"]+"\"><span>" + allRibbons[titleBon]["titles"]["chs"].replace(/\[.*\]/, pkmn.ot) + "</span>";
 	}
 
 	var lang = pkmn.lang;
@@ -772,16 +772,16 @@ function addRow(pkmn, i){
 	var name = pkmn.name;
 	if(name.length === 0){
 		var namelang = pkmn.lang;
-		if(!namelang) namelang = "ENG";
+		if(!namelang) namelang = "CHS";
 		namelang = namelang.toLowerCase();
 		name = getData(pkmn.dex, "names")[namelang];
 	}
 
 	var ballName = balls[pkmn.ball];
 	if(ballName){
-		ballName = ballName["eng"];
+		ballName = ballName["chs"];
 	} else {
-		ballName = hisuiballs[pkmn.ball]["eng"];
+		ballName = hisuiballs[pkmn.ball]["chs"];
 	}
 
 	// TODO: make boxes a global variable to avoid having to pull them every time a Pokemon is generated
@@ -992,9 +992,9 @@ function generateRibbons(){
 			rGen = rData["gen"];
 		}
 		var rDesc = "";
-		if(rData["descs"]) rDesc = " - " + rData["descs"]["eng"];
-		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><label for='"+r+"'><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["eng"] + "\" title=\"" + rData["names"]["eng"] + rDesc + "\"></label>");
-		if(rData["titles"]) $("#pokeform-title-" + rGen).append(new Option(rData["titles"]["eng"], r));
+		if(rData["descs"]) rDesc = " - " + rData["descs"]["chs"];
+		$("#ribbons-list-" + rGen).append("<input id='" + r + "' type='checkbox' form='newpkmnform' hidden><label for='"+r+"'><img class='" + r + "' src='img/" + rFldr + "/" + r + ".png' alt=\"" + rData["names"]["chs"] + "\" title=\"" + rData["names"]["chs"] + rDesc + "\"></label>");
+		if(rData["titles"]) $("#pokeform-title-" + rGen).append(new Option(rData["titles"]["chs"], r));
 	}
 	resetRibbonGuide();
 }
@@ -1003,7 +1003,7 @@ function resetRibbonGuide(){
 	$("#ribbonguide-transfer, #ribbonguide-warnings li, #ribbonguide-info .metlevel").empty();
 	for(var i in ribbonIDs){
 		if(parseInt(ribbonIDs[i])){
-			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in "+i+"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave "+i+"<span class='unsure'> after verifying special cases</span>.</div></div>");
+			$("#ribbonguide-transfer").append("<div id='ribbonguide-transfer-"+ribbonIDs[i]+"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>只能在「"+i+"」获得：</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>可以在后续版本获得：</div></div><div class='ribbonguide-transfer-footer'><span class='unsure'>在验证特殊情况后，</span>「<span class='name'></span>」<span class='notready'>还未</span>准备好离开「"+i+"」。</div></div>");
 		}
 	}
 }
@@ -1094,7 +1094,7 @@ function formatDropOption(o){
 		}
 		return $origin;
 	} else if(result.indexOf("pokeform-title") > 0){
-		if(o.id === "None") return $("<span>None</span>");
+		if(o.id === "None") return $("<span>无</span>");
 		var rDir = "ribbons";
 		if(o.id.indexOf("-mark") > 0) rDir = "marks";
 		return $("<img src='img/" + rDir + "/" + o.id + ".png' class='pokedropimg'><span>" + o.text + "</span>");
@@ -1273,7 +1273,7 @@ $(function(){
 	// Load languages
 	var setlang = localStorage.getItem("language");
 	if(!setlang){
-		setlang = "eng";
+		setlang = "chs";
 		//showModal("settings");
 	}
 	changeLang(setlang, false);
@@ -1287,7 +1287,7 @@ $(function(){
 	for(var l in languages){
 		var lcap = l.toUpperCase();
 		var curlang = (l == setlang) ? true : false;
-		$("#pokeform-lang, #filterform-lang").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, lcap));
+		$("#pokeform-lang, #filterform-lang").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, lcap, (lcap === "CHS"), (lcap === "CHS")));
 		$("#settings-language").append(new Option((lcap === "SPA" ? "SP-EU" : lcap) + " - " + languages[l].name, l, curlang, curlang));
 	}
 
@@ -1313,9 +1313,9 @@ $(function(){
 		var sort = natures[n]["index"];
 		sort = " data-sort='" + sort + "'";
 		if(natures[n]["img"]){
-			$("#pokeform-mint").append("<option value='" + n + "'" + sort + namedata + ">" + names["eng"] + " Mint</option>");
+			$("#pokeform-mint").append("<option value='" + n + "'" + sort + namedata + ">" + names["chs"] + " Mint</option>");
 		}
-		$("#pokeform-nature").append("<option value='" + n + "'" + sort + namedata + ">" + names["eng"] + "</option>");
+		$("#pokeform-nature").append("<option value='" + n + "'" + sort + namedata + ">" + names["chs"] + "</option>");
 		if(n === "Quirky"){
 			var natureSort = function(a, b){
 				return a.dataset.sort - b.dataset.sort;
@@ -1351,10 +1351,10 @@ $(function(){
 
 	// Load form data: Poké Balls
 	for(var b in balls){
-		$("#pokeform-ball-standard, #filterform-ball-standard").append(new Option(balls[b]["eng"], b));
+		$("#pokeform-ball-standard, #filterform-ball-standard").append(new Option(balls[b]["chs"], b));
 	}
 	for(var hb in hisuiballs){
-		$("#pokeform-ball-hisui, #filterform-ball-hisui").append(new Option(hisuiballs[hb]["eng"], hb));
+		$("#pokeform-ball-hisui, #filterform-ball-hisui").append(new Option(hisuiballs[hb]["chs"], hb));
 	}
 
 	// Load form data: Pokémon
@@ -1406,7 +1406,7 @@ $(function(){
 				for(var pf in forms){
 					formdata = formdata + " data-form-" + pf + "='" + forms[pf] + "'";
 				}
-				formdisp = " (" + forms["eng"] + ")";
+				formdisp = " (" + forms["chs"] + ")";
 			}
 		}
 		var sort = getData(p, "sort", true);
@@ -1415,7 +1415,7 @@ $(function(){
 		} else {
 			sort = "";
 		}
-		$("#pokeform-species-" + natgen).append("<option value='" + p + "' data-natdex='" + natdex + "'" + sort + namedata + formdata + ">" + names["eng"] + formdisp + "</option>");
+		$("#pokeform-species-" + natgen).append("<option value='" + p + "' data-natdex='" + natdex + "'" + sort + namedata + formdata + ">" + names["chs"] + formdisp + "</option>");
 		if(pl === plmax){
 			var dexSort = function(a, b){
 				if(a.dataset.natdex === b.dataset.natdex){

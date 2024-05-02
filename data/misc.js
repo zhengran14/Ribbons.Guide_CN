@@ -10,9 +10,12 @@ const languages = {
 	"cht": { "iso": "zh-Hant", "name": "正體字" },		// Traditional Chinese (Cantonese)
 	"chs": { "iso": "zh-Hans", "name": "简化字" }		// Simplified Chinese (Mandarin)
 }
+languages["cht"]["name"] = "繁体中文";
+languages["chs"]["name"] = "简体中文";
 
 // Ribbon Gen IDs
-const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII/IX": 8};
+// const ribbonIDs = {"Event": "e", "Marks": "m", "Gen III": 3, "Gen IV": 4, "Gen VI": 6, "Gen VII": 7, "Gen VIII/IX": 8};
+const ribbonIDs = {"活动": "e", "证章": "m", "第三世代": 3, "第四世代": 4, "第六世代": 6, "第七世代": 7, "第八、九世代": 8};
 
 // General terms
 const terms = {
@@ -51,6 +54,18 @@ const terms = {
 		"m": "Marks"
 	}
 }
+terms["none"]["cht"] = "無";
+terms["none"]["chs"] = "无";
+terms["gens"][1] = "第一世代 虚拟主机";
+terms["gens"][2] = "第二世代 虚拟主机";
+terms["gens"][3] = "第三世代";
+terms["gens"][4] = "第四世代";
+terms["gens"][5] = "第五世代";
+terms["gens"][6] = "第六世代";
+terms["gens"][7] = "第七世代";
+terms["gens"][8] = "第八、九世代";
+terms["gens"]["e"] = "活动";
+terms["gens"]["m"] = "证章";
 
 // Origin Marks
 const games = {
@@ -102,6 +117,53 @@ const games = {
 	"blue-eng":	{"name": "Blue (ENG)",			"gen": 1,		"mark": "game-boy"},
 	"yellow":	{"name": "Yellow",				"gen": 1,		"mark": "game-boy"}
 };
+games["home"]["name"] = "HOME";
+games["bank7"]["name"] = "虚拟银行（第七世代）";
+games["bank"]["name"] = "虚拟银行（第六世代）";
+games["plza"]["name"] = "传说 Z-A";
+games["scar"]["name"] = "朱";
+games["vio"]["name"] = "紫";
+games["sw"]["name"] = "剑";
+games["sh"]["name"] = "盾";
+games["bd"]["name"] = "晶灿钻石";
+games["sp"]["name"] = "明亮珍珠";
+games["pla"]["name"] = "传说 阿尔宙斯";
+games["go"]["name"] = "GO";
+games["sun"]["name"] = "日";
+games["moon"]["name"] = "月";
+games["usun"]["name"] = "究极之日";
+games["umoon"]["name"] = "究极之月";
+games["lgp"]["name"] = "Let's Go! 皮卡丘";
+games["lge"]["name"] = "Let's Go! 伊布";
+games["x"]["name"] = "X";
+games["y"]["name"] = "Y";
+games["or"]["name"] = "欧米伽红宝石";
+games["as"]["name"] = "阿尔法蓝宝石";
+games["black"]["name"] = "黑";
+games["white"]["name"] = "白";
+games["black2"]["name"] = "黑2";
+games["white2"]["name"] = "白2";
+games["diamond"]["name"] = "钻石";
+games["pearl"]["name"] = "珍珠";
+games["platinum"]["name"] = "白金";
+games["hg"]["name"] = "心金";
+games["ss"]["name"] = "魂银";
+games["ruby"]["name"] = "红宝石";
+games["sapphire"]["name"] = "蓝宝石";
+games["emerald"]["name"] = "绿宝石";
+games["fr"]["name"] = "火红";
+games["lg"]["name"] = "叶绿";
+games["colosseum"]["name"] = "圆形竞技场";
+games["xd"]["name"] = "XD 暗之旋风 黑暗洛奇亚";
+games["gold"]["name"] = "金";
+games["silver"]["name"] = "银";
+games["crystal"]["name"] = "水晶";
+games["red-jpn"]["name"] = "红（日版）";
+games["green"]["name"] = "绿";
+games["blue-jpn"]["name"] = "蓝（日版）";
+games["red-eng"]["name"] = "红（美版）";
+games["blue-eng"]["name"] = "蓝（美版）";
+games["yellow"]["name"] = "黄";
 
 const commonforms = {
 	"alola": {

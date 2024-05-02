@@ -1783,7 +1783,9 @@ const allRibbons = {
 			"fre": "Ruban Gagnant",
 			"ita": "Fiocco Vittoria",
 			"jpn": "ウイニングリボン",
-			"kor": "위닝리본"
+			"kor": "위닝리본",
+			"cht": "成功獎章",
+			"chs": "成功奖章"
 		},
 		"descs": {
 			"ger": "Band für Siege in der Lv. 50-Kategorie im Duellturm von Hoenn",
@@ -1792,7 +1794,9 @@ const allRibbons = {
 			"fre": "Ruban pour une victoire au N. 50 de la Tour de Combat de Hoenn.",
 			"ita": "Fiocco per aver completato la sfida al L. 50 della Torre Lotta della regione di Hoenn.",
 			"jpn": "ホウエンの　バトルタワア　レベル５０を　かちぬいた　きねんの　リボン",
-			"kor": "호연의 배틀타워 레벨 50에서 연승한 기념리본"
+			"kor": "호연의 배틀타워 레벨 50에서 연승한 기념리본",
+			"cht": "在豐緣地區的對戰塔獲得５０級組冠軍時得到的紀念獎章。",
+			"chs": "在丰缘地区的对战塔获得５０级组冠军时得到的纪念奖章。"
 		}
 	},
 	"victory-ribbon": {

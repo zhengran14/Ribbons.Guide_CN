@@ -1,0 +1,368 @@
+{
+    "Keep track of your Pokémon and their Ribbons using Ribbons.Guide!": {
+        "chs": "使用Ribbons.Guide来记录您的宝可梦以及他们的奖章。"
+    },
+    "Ribbon Tracking and Guidance": {
+        "chs": "奖章记录与指导"
+    },
+    "You have no saved Pokémon. Click or tap the + button at the bottom-right to add one! If you have a backup file, click the ⛭ button at the top-right to restore the backup.": {
+        "chs": "您还没有保存任何宝可梦。点击屏幕右下角的+按钮新建。如果您有备份文件，请点击屏幕右上角的⛭按钮恢复备份。"
+    },
+    "This open-source project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All data is stored in your browser.": {
+        "chs": "本开源项目与Nintendo、Creatures Inc.、Game Freak或者The Pokémon Company无关。所有数据都保存在您的浏览器中。"
+    },
+    "View the source code on GitHub.": {
+        "chs": "您可以在GitHub上查看源代码。"
+    },
+    "All Stats fields are optional for your own record-keeping. Stats info will not affect the site's Ribbon guidance for your Pokémon.": {
+        "chs": "所有有关能力的字段可根据您自己的记录需求选择填写。能力信息与网站对宝可梦的奖章指导没有关联。"
+    },
+    "This Pokémon has no ribbons.": {
+        "chs": "这只宝可梦没有任何证章。"
+    },
+    "You need to set ": {
+        "chs": "您需要给"
+    },
+    "'s current level to get Ribbon guidance!": {
+        "chs": "设置「当前等级」才能获得奖章指导。"
+    },
+    "'s current game to get Ribbon guidance!": {
+        "chs": "设置「当前版本」才能获得奖章指导。"
+    },
+    "Are you sure you wish to cancel? All of your changes will be lost!": {
+        "chs": "是否确定要取消？您所有的更改都将丢失！"
+    },
+    "You don't have any boxes!": {
+        "chs": "您没有任何盒子。"
+    },
+    "Pokémon will only be shown if they fulfill all conditions, including being able to travel to all of the selected games (which requires setting their current game). Pokémon stored in HOME are not considered able to travel to <em>Let's&nbsp;Go, Pikachu!</em> or <em>Let's&nbsp;Go, Eevee!</em>.": {
+        "chs": "只有满足所有条件的宝可梦才会显示出来，其中包括所有选择的可移动过去的版本（这需要设置宝可梦的「当前版本」）。寄放在HOME的宝可梦被认为不可移动到<em>「Let's&nbsp;Go! 皮卡丘」</em>和<em>「Let's&nbsp;Go! 伊布」</em>。"
+    },
+    "You have no Pokémon that match your current filters.": {
+        "chs": "没有搜索到满足条件的宝可梦。"
+    },
+    "The images used in Ribbons.Guide were provided by <a href=\"https://pokejungle.net\">PokéJungle</a>, <a href=\"https://pokemondb.net\">Pokémon Database</a>, <a href=\"https://github.com/msikma/pokesprite\">PokéSprite</a>, <a href=\"https://archives.bulbagarden.net/wiki/Main_Page\">Bulbagarden Archives</a>, <a href=\"https://github.com/PokeMiners/pogo_assets\">Pokémon GO Assets</a>, and <a href=\"https://github.com/google/material-design-icons\">Material Symbols</a>. Ribbons.Guide also makes use of <a href=\"https://github.com/jquery/jquery\">jQuery</a>, <a href=\"https://github.com/jquery/jquery-ui\">jQuery UI</a>, <a href=\"https://github.com/RWAP/jquery-ui-touch-punch\">jQuery UI Touch Punch</a>, <a href=\"https://github.com/kylefox/jquery-modal\">jQuery Modal</a>, <a href=\"https://github.com/select2/select2\">Select2</a>, <a href=\"https://github.com/TalAter/UpUp\">UpUp</a>, and <a href=\"https://fonts.google.com/\">Google Fonts</a>.": {
+        "chs": "Ribbons.Guide使用的图片来源于：<a href=\"https://pokejungle.net\">PokéJungle</a>，<a href=\"https://pokemondb.net\">Pokémon Database</a>，<a href=\"https://github.com/msikma/pokesprite\">PokéSprite</a>，<a href=\"https://archives.bulbagarden.net/wiki/Main_Page\">Bulbagarden Archives</a>，<a href=\"https://github.com/PokeMiners/pogo_assets\">Pokémon GO Assets</a> 和 <a href=\"https://github.com/google/material-design-icons\">Material Symbols</a>。Ribbons.Guide同时也使用了：<a href=\"https://github.com/jquery/jquery\">jQuery</a>，<a href=\"https://github.com/jquery/jquery-ui\">jQuery UI</a>，<a href=\"https://github.com/RWAP/jquery-ui-touch-punch\">jQuery UI Touch Punch</a>，<a href=\"https://github.com/kylefox/jquery-modal\">jQuery Modal</a>，<a href=\"https://github.com/select2/select2\">Select2</a>，<a href=\"https://github.com/TalAter/UpUp\">UpUp</a> 和 <a href=\"https://fonts.google.com/\">Google Fonts</a>。"
+    },
+    "Pokémon, data, and images © Nintendo/Creatures Inc./Game Freak. This project is not affiliated with Nintendo, Creatures Inc., Game Freak, or The Pokémon Company. All original content and code is governed by the <a href=\"https://opensource.org/license/gpl-3-0/\">GPL-3.0 license</a>.": {
+        "chs": "宝可梦，数据和图片的版权归 © Nintendo/Creatures Inc./Game Freak所有。本项目与Nintendo、Creatures Inc.、Game Freak或者The Pokémon Company无关。所有原创内容和代码受<a href=\"https://opensource.org/license/gpl-3-0/\">GPL-3.0 license</a>约束。"
+    },
+    "Nickname": {
+        "chs": "昵称"
+    },
+    "Species": {
+        "chs": "宝可梦"
+    },
+    "Gen IX": {
+        "chs": "第九世代"
+    },
+    "Gen VIII": {
+        "chs": "第八世代"
+    },
+    "Gen VII": {
+        "chs": "第七世代"
+    },
+    "Gen VI": {
+        "chs": "第六世代"
+    },
+    "Gen V": {
+        "chs": "第五世代"
+    },
+    "Gen IV": {
+        "chs": "第四世代"
+    },
+    "Gen III": {
+        "chs": "第三世代"
+    },
+    "Gen II": {
+        "chs": "第二世代"
+    },
+    "Gen I": {
+        "chs": "第一世代"
+    },
+    "Gen I Virtual Console": {
+        "chs": "第一世代 虚拟主机"
+    },
+    "Gen II Virtual Console": {
+        "chs": "第二世代 虚拟主机"
+    },
+    "Gen VIII/IX": {
+        "chs": "第八、九世代"
+    },
+    "Normal": {
+        "chs": "普通"
+    },
+    "Star": {
+        "chs": "星星异色"
+    },
+    "Square": {
+        "chs": "方块异色"
+    },
+    "Male": {
+        "chs": "雄性"
+    },
+    "Female": {
+        "chs": "雌性"
+    },
+    "Gender unknown": {
+        "chs": "性别不明"
+    },
+    "Poké Ball": {
+        "chs": "精灵球"
+    },
+    "Standard": {
+        "chs": "普通"
+    },
+    "Hisui": {
+        "chs": "洗翠地区"
+    },
+    "Language": {
+        "chs": "语言"
+    },
+    "Met Level": {
+        "chs": "相遇等级"
+    },
+    "Current Level ▲": {
+        "chs": "当前等级 ▲"
+    },
+    "Current Level ▼": {
+        "chs": "当前等级 ▼"
+    },
+    "<div><span>Level:</span> <span class=\"level\"></span> <span class=\"metlevel\"></span></div>": {
+        "chs": "<div><span>等级：</span><span class=\"level\"></span><span class=\"metlevel\"></span></div>"
+    },
+    "Level": {
+        "chs": "等级"
+    },
+    "Scale": {
+        "chs": "尺寸"
+    },
+    "Checked in Mesagoza": {
+        "chs": "在桌台市检查"
+    },
+    "Original Trainer": {
+        "chs": "初训家"
+    },
+    "Origin Game": {
+        "chs": "来源版本"
+    },
+    "Current Game": {
+        "chs": "当前版本"
+    },
+    "Storage": {
+        "chs": "存储系统"
+    },
+    "Boxes": {
+        "chs": "盒子"
+    },
+    "Current Box": {
+        "chs": "当前盒子"
+    },
+    "Edit Boxes": {
+        "chs": "编辑盒子"
+    },
+    "New Box": {
+        "chs": "新建盒子"
+    },
+    "Box": {
+        "chs": "盒子"
+    },
+    "None": {
+        "chs": "无"
+    },
+    "Add New Pokémon": {
+        "chs": "新建宝可梦"
+    },
+    "Add New": {
+        "chs": "新建"
+    },
+    "Edit": {
+        "chs": "修改"
+    },
+    "Ability": {
+        "chs": "特性"
+    },
+    "Characteristic": {
+        "chs": "个性"
+    },
+    "* For Pokémon in Gen IV or Gen V games:": {
+        "chs": "* 英文版中，第四世代和第五世代有两种个性翻译错位："
+    },
+    "\"Takes plenty of siestas\" = \"Often dozes off\"": {
+        "chs": "「经常睡午觉」被翻译成「Nods off a lot」或「Often dozes off」。"
+    },
+    "\"Nods off a lot\" = \"Often scatters things\"": {
+        "chs": "「常常打瞌睡」被翻译成「Often scatters things」。"
+    },
+    "<div><span>Game:</span> <span class=\"game\"></span> <span class=\"metgame\"></span></div>": {
+        "chs": "<div><span>版本：</span><span class=\"game\"></span><span class=\"metgame\"></span></div>"
+    },
+    "\" (met in \"+games[pkmn.origin].name+\")\"": {
+        "chs": "\"（相遇：\"+games[pkmn.origin].name+\"）\""
+    },
+    "\" (met at \"+pkmn.metlevel+\")\"": {
+        "chs": "\"（相遇：\"+pkmn.metlevel+\"）\""
+    },
+    "\"Are you sure? All of \" + name + \"'s data will be permanently erased!\"": {
+        "chs": "\"是否确定删除这只宝可梦？「\" + name + \"」的所有数据会被立刻清除！\""
+    },
+    "\"Are you sure? All of the Pokémon in \" + name + \" will become unsorted.\"": {
+        "chs": "\"是否确定删除这个盒子？「\" + name + \"」中的所有宝可梦会变得无序。\""
+    },
+    "name + \"'s Met Level has not been set. The availability of the Footprint Ribbon after \"+terms.gens[4]+\" cannot be determined.\"": {
+        "chs": "\"请设置「\" + name + \"」的「遇见等级」，否则无法确定在\" + terms.gens[4] + \"之后是否可以获得「脚印奖章」。\""
+    },
+    "\"Leveling \" + name + \" above Lv.50 will make the Winning Ribbon unavailable!\"": {
+        "chs": "\"将「\" + name + \"」的等级提升到50级以上（不包括50级）将无法获得「成功奖章」！\""
+    },
+    "\"Leveling \" + name + \" above Lv.70 will make the Footprint Ribbon exclusive to \"+terms.gens[4]+\"!\"": {
+        "chs": "\"将「\" + name + \"」的等级提升到70级以上（不包括70级）将无法在\"+terms.gens[4]+\"之后获得「脚印奖章」！\""
+    },
+    "\"Leveling \" + name + \" above Lv.70 will make the Footprint Ribbon unavailable!\"": {
+        "chs": "\"将「\" + name + \"」的等级提升到70级以上（不包括70级）将无法获得「脚印奖章」！\""
+    },
+    "\"Evolving \" + name + \" into \" + evoWarnName + \" may change the availability of certain Ribbons!\"": {
+        "chs": "\"将「\" + name + \"」进化为「\" + evoWarnName + \"」可能会导致无法获得某些奖章！\""
+    },
+    "\"If \" + name + \" is a Totem-sized Pokémon, \" + name + \" cannot leave \" + terms.gens[7] + \".\"": {
+        "chs": "\"如果「\" + name + \"」是霸主宝可梦，它则无法离开\" + terms.gens[7] + \"。\""
+    },
+    "<div id='ribbonguide-transfer-\"+ribbonIDs[i]+\"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>Last chance in \"+i+\"</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>Available later</div></div><div class='ribbonguide-transfer-footer'><span class='name'></span> is<span class='notready'> not</span> ready to leave \"+i+\"<span class='unsure'> after verifying special cases</span>.</div></div>": {
+        "chs": "<div id='ribbonguide-transfer-\"+ribbonIDs[i]+\"'><div class='ribbonguide-transfer-exclusive' style='display:none'><div>只能在「\"+i+\"」获得：</div></div><div class='ribbonguide-transfer-later' style='display:none'><div>可以在后续版本获得：</div></div><div class='ribbonguide-transfer-footer'><span class='unsure'>在验证特殊情况后，</span>「<span class='name'></span>」<span class='notready'>还未</span>准备好离开「\"+i+\"」。</div></div>"
+    },
+    "IVs": {
+        "chs": "个体值"
+    },
+    "EVs": {
+        "chs": "基础点数"
+    },
+    "Title": {
+        "chs": "头衔"
+    },
+    "Mint": {
+        "chs": "薄荷"
+    },
+    "Nature": {
+        "chs": "性格"
+    },
+    "Met Date": {
+        "chs": "相遇日期"
+    },
+    "Name": {
+        "chs": "名字"
+    },
+    "Gender": {
+        "chs": "性别"
+    },
+    "Shiny": {
+        "chs": "异色"
+    },
+    "Games it can": {
+        "chs": "可移动过去"
+    },
+    " travel to": {
+        "chs": "的版本"
+    },
+    "Filter/Sort Pokémon": {
+        "chs": "搜索/排序"
+    },
+    "⇵ Sort": {
+        "chs": "⇵ 排序"
+    },
+    "Default": {
+        "chs": "默认"
+    },
+    "National Pokédex ▲": {
+        "chs": "全国图鉴 ▲"
+    },
+    "National Pokédex ▼": {
+        "chs": "全国图鉴 ▼"
+    },
+    "Name (A-Z)": {
+        "chs": "名字（A-Z）"
+    },
+    "Name (Z-A)": {
+        "chs": "名字（Z-A）"
+    },
+    "Add": {
+        "chs": "新建"
+    },
+    "Save": {
+        "chs": "保存"
+    },
+    "Cancel": {
+        "chs": "取消"
+    },
+    "Reset": {
+        "chs": "还原"
+    },
+    "Close": {
+        "chs": "关闭"
+    },
+    "Settings": {
+        "chs": "设置"
+    },
+    "Theme": {
+        "chs": "主题"
+    },
+    "Data": {
+        "chs": "数据"
+    },
+    "Backup": {
+        "chs": "备份"
+    },
+    "Restore": {
+        "chs": "还原"
+    },
+    "Dark": {
+        "chs": "深色"
+    },
+    "Light": {
+        "chs": "浅色"
+    },
+    "Changes": {
+        "chs": "更新"
+    },
+    "Changelog": {
+        "chs": "更新日志"
+    },
+    "Commits": {
+        "chs": "提交日志"
+    },
+    "Ribbon Guide": {
+        "chs": "奖章指导"
+    },
+    "Warnings": {
+        "chs": "警告"
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "": {
+        "chs": ""
+    },
+    "Pokémon": {
+        "chs": "宝可梦"
+    }
+}

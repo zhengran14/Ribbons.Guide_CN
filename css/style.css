@@ -1374,3 +1374,14 @@ body[lang="zh-Hans"] span.lang.chs {
 .pokeform-scale-icon + .pokeform-scale-icon {
 	margin-left: 0;
 }
+
+/* New */
+#pokeform th {
+	white-space: nowrap;
+}
+#settings #settings-buttons th {
+	white-space: nowrap;
+}
+#boxform th {
+	white-space: nowrap;
+}
